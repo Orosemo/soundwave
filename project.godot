@@ -11,8 +11,25 @@ config_version=5
 [application]
 
 config/name="Sound wave"
+run/main_scene="uid://c2y7xlbib5uqi"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+soundwaveMusicManager="*uid://dm14xfb5jy047"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/soundwave_music_manager/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "red",
+"res://test/": "green",
+"res://test/playlists/": "blue"
+}
 
 [physics]
 

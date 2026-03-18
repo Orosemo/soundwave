@@ -1,0 +1,7 @@
+[gd_resource type="AudioStreamPlaylist" format=3 uid="uid://3hj3rbhl4q05"]
+
+[ext_resource type="AudioStream" uid="uid://dowgrvt55xwi3" path="res://test/music/musicfox_hot_dogs_for_breakfast.mp3" id="1_t0h41"]
+
+[resource]
+stream_count = 1
+stream_0 = ExtResource("1_t0h41")

@@ -1,0 +1,7 @@
+[gd_resource type="AudioStreamPlaylist" format=3 uid="uid://dujs74n5o1rnu"]
+
+[ext_resource type="AudioStream" uid="uid://c5ldv2py8ahmc" path="res://test/music/musicfox_friendship_forever.mp3" id="1_tmwna"]
+
+[resource]
+stream_count = 1
+stream_0 = ExtResource("1_tmwna")

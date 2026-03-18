@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://x4su2dhjomq7"
+path="res://.godot/imported/musicfox_shopping_street (1).mp3-48dfd10ff6b07a625cc3ef679cfa8a2c.mp3str"
+
+[deps]
+
+source_file="res://test/music/musicfox_shopping_street (1).mp3"
+dest_files=["res://.godot/imported/musicfox_shopping_street (1).mp3-48dfd10ff6b07a625cc3ef679cfa8a2c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

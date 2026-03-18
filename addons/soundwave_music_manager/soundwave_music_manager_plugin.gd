@@ -3,11 +3,11 @@ extends EditorPlugin
 
 
 func _enable_plugin() -> void:
-	add_autoload_singleton("soundwave music manager", "addons/soundwave_music_manager/soundwave_music_manager.tscn")
+	add_autoload_singleton("soundwaveMusicManager", "res://addons/soundwave_music_manager/soundwave_music_manager.tscn")
 
 
 func _disable_plugin() -> void:
-	remove_autoload_singleton("soundwave music manager")
+	remove_autoload_singleton("soundwaveMusicManager")
 
 
 func _enter_tree() -> void:

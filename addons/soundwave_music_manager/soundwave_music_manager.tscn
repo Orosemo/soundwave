@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://dm14xfb5jy047"]
 
-[ext_resource type="Script" uid="uid://cmf55olxs4fs0" path="res://addons/soundwave_music_manager/music-manager.gd" id="1_cok0y"]
+[ext_resource type="Script" uid="uid://de2cmgpc2p1l6" path="res://addons/soundwave_music_manager/soundwave_music-manager.gd" id="1_cok0y"]
+[ext_resource type="AudioStream" uid="uid://g3xb46bupb7c" path="res://test/playlists/playlist1.tres" id="2_qkfuj"]
+[ext_resource type="AudioStream" uid="uid://dujs74n5o1rnu" path="res://test/playlists/playlist2.tres" id="3_kimou"]
+[ext_resource type="AudioStream" uid="uid://3hj3rbhl4q05" path="res://test/playlists/playlist3.tres" id="4_ahncu"]
 
 [node name="SoundwaveMusicManager" type="AudioStreamPlayer2D" unique_id=1751678716]
 script = ExtResource("1_cok0y")
+playlists = Dictionary[String, AudioStreamPlaylist]({
+"playlist1": ExtResource("2_qkfuj"),
+"playlist2": ExtResource("3_kimou"),
+"playlist3": ExtResource("4_ahncu")
+})
+play_on_load = ExtResource("2_qkfuj")
+fade_duration = 0.5
