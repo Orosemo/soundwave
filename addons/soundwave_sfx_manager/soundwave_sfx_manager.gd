@@ -3,8 +3,8 @@ extends EditorPlugin
 
 
 func _enable_plugin() -> void:
-	# Add autoloads here.
-	pass
+	if AudioServer.get_bus_index("sfx") == -1:
+		print("Please create a <sfx> bus")
 
 
 func _disable_plugin() -> void:

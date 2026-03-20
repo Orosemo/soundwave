@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://3hj3rbhl4q05" path="res://test/playlists/playlist3.tres" id="4_ahncu"]
 
 [node name="SoundwaveMusicManager" type="AudioStreamPlayer2D" unique_id=1751678716]
+bus = &"music"
 script = ExtResource("1_cok0y")
 playlists = Dictionary[String, AudioStreamPlaylist]({
 "playlist1": ExtResource("2_qkfuj"),
@@ -14,3 +15,4 @@ playlists = Dictionary[String, AudioStreamPlaylist]({
 })
 play_on_load = ExtResource("2_qkfuj")
 fade_duration = 0.5
+fade_mode = 2

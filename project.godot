@@ -21,7 +21,7 @@ soundwaveMusicManager="*uid://dm14xfb5jy047"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/soundwave_music_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/soundwave_music_manager/plugin.cfg", "res://addons/soundwave_sfx_manager/plugin.cfg")
 
 [file_customization]
 

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c2y7xlbib5uqi"]
 
 [ext_resource type="Script" uid="uid://5gaxf11lvmc5" path="res://test/musicmanager_test.gd" id="1_w4bdu"]
+[ext_resource type="Script" uid="uid://pq8b7qgua5ye" path="res://addons/soundwave_sfx_manager/soundwave_sfx_manager_2d.gd" id="2_spul4"]
+[ext_resource type="AudioStream" uid="uid://dibkn30lsexaf" path="res://test/sfx/848363__matustrm__sfx_reward.wav" id="3_2ofnm"]
 
 [node name="MusicmanagerTest" type="Control" unique_id=1440599460]
 layout_mode = 3
@@ -40,6 +42,24 @@ offset_bottom = 436.0
 text = "play playlist 3
 "
 
+[node name="ping" type="Button" parent="." unique_id=1511048291]
+layout_mode = 0
+offset_left = 761.0
+offset_top = 364.0
+offset_right = 1004.0
+offset_bottom = 454.0
+text = "play ping
+
+"
+
+[node name="pingSfx" type="Node2D" parent="." unique_id=925378555]
+script = ExtResource("2_spul4")
+songs = Dictionary[String, AudioStream]({
+"ping": ExtResource("3_2ofnm")
+})
+metadata/_custom_type_script = "uid://pq8b7qgua5ye"
+
 [connection signal="pressed" from="playlist1" to="." method="_on_playlist_1_pressed"]
 [connection signal="pressed" from="playlist2" to="." method="_on_playlist_2_pressed"]
 [connection signal="pressed" from="playlist3" to="." method="_on_playlist_3_pressed"]
+[connection signal="pressed" from="ping" to="." method="_on_ping_pressed"]

@@ -11,3 +11,7 @@ func _on_playlist_2_pressed() -> void:
 
 func _on_playlist_3_pressed() -> void:
 	soundwaveMusicManager.play_playlist("playlist3")
+
+
+func _on_ping_pressed() -> void:
+	$pingSfx.play_song("ping")

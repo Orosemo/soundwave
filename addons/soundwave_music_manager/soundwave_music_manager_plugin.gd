@@ -4,7 +4,8 @@ extends EditorPlugin
 
 func _enable_plugin() -> void:
 	add_autoload_singleton("soundwaveMusicManager", "res://addons/soundwave_music_manager/soundwave_music_manager.tscn")
-
+	if AudioServer.get_bus_index("music") == -1:
+		print("Please create a <music> bus")
 
 func _disable_plugin() -> void:
 	remove_autoload_singleton("soundwaveMusicManager")
