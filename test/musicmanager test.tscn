@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5gaxf11lvmc5" path="res://test/musicmanager_test.gd" id="1_w4bdu"]
 [ext_resource type="Script" uid="uid://pq8b7qgua5ye" path="res://addons/soundwave_sfx_manager/soundwave_sfx_manager_2d.gd" id="2_spul4"]
-[ext_resource type="AudioStream" uid="uid://dibkn30lsexaf" path="res://test/sfx/848363__matustrm__sfx_reward.wav" id="3_2ofnm"]
+[ext_resource type="Script" uid="uid://bwt8kbjwegvmd" path="res://addons/soundwave_sfx_manager/soundwave_sfx_manager_3d.gd" id="3_spul4"]
 
 [node name="MusicmanagerTest" type="Control" unique_id=1440599460]
 layout_mode = 3
@@ -54,10 +54,10 @@ text = "play ping
 
 [node name="pingSfx" type="Node2D" parent="." unique_id=925378555]
 script = ExtResource("2_spul4")
-songs = Dictionary[String, AudioStream]({
-"ping": ExtResource("3_2ofnm")
-})
 metadata/_custom_type_script = "uid://pq8b7qgua5ye"
+
+[node name="SoundwaveSfx3D" type="Node3D" parent="." unique_id=1431037555]
+script = ExtResource("3_spul4")
 
 [connection signal="pressed" from="playlist1" to="." method="_on_playlist_1_pressed"]
 [connection signal="pressed" from="playlist2" to="." method="_on_playlist_2_pressed"]
