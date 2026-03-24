@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bv7fgpsdshko1"]
+
+[ext_resource type="TileSet" uid="uid://c5kxieu1uxtcd" path="res://demo/demo_assets/tilesets/demo_2d.tres" id="1_d0fqr"]
+
+[node name="Demo2d" type="Node2D" unique_id=1175411504]
+
+[node name="tilemap" type="Node2D" parent="." unique_id=911119587]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="tilemap" unique_id=1924447493]
+tile_set = ExtResource("1_d0fqr")
