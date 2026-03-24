@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://t0v24jh1shx3"]
+
+[ext_resource type="Script" uid="uid://x7k2eyuukjto" path="res://demo/coin2d.gd" id="1_7gje6"]
+[ext_resource type="Texture2D" uid="uid://bda67seha2bpn" path="res://demo/demo_assets/UI/Tilemap/tilemap.png" id="2_215fn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32kbj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f30x4"]
+atlas = ExtResource("2_215fn")
+region = Rect2(133, 57, 18, 18)
+
+[sub_resource type="Animation" id="Animation_bht6l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hryyd"]
+resource_name = "dissapear"
+length = 0.6666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_543hh"]
+resource_name = "idle"
+length = 4.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.04, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1), Vector2(0, 0), Vector2(0, 1), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ehpjh"]
+_data = {
+&"RESET": SubResource("Animation_bht6l"),
+&"dissapear": SubResource("Animation_hryyd"),
+&"idle": SubResource("Animation_543hh")
+}
+
+[node name="Coin" type="Area2D" unique_id=1329345369]
+collision_layer = 4
+script = ExtResource("1_7gje6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=416379047]
+shape = SubResource("CircleShape2D_32kbj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1164801799]
+texture_filter = 1
+texture = SubResource("AtlasTexture_f30x4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1136941293]
+libraries/ = SubResource("AnimationLibrary_ehpjh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
